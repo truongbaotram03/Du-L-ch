@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Du Lịch Huế</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        font-family: Arial, sans-serif;
+        background: url("https://images.unsplash.com/photo-1583394293214-28ded15ee548") no-repeat center center/cover;
+        background-attachment: fixed;
+    }
+
+    /* Lớp phủ mờ */
+    .overlay{
+        background: rgba(0,0,0,0.6);
+        min-height:100vh;
+    }
+
+    header{
+        text-align:center;
+        color:white;
+        padding:40px 20px;
+    }
+
+    header h1{
+        font-size:40px;
+        margin-bottom:10px;
+    }
+
+    nav{
+        background: rgba(255,255,255,0.15);
+        text-align:center;
+        padding:15px;
+        backdrop-filter: blur(5px);
+    }
+
+    nav a{
+        color:white;
+        text-decoration:none;
+        margin:0 20px;
+        font-weight:bold;
+        transition:0.3s;
+    }
+
+    nav a:hover{
+        color:yellow;
+    }
+
+    section{
+        width:80%;
+        margin:40px auto;
+        background: rgba(255,255,255,0.9);
+        padding:30px;
+        border-radius:10px;
+        box-shadow:0 0 15px rgba(0,0,0,0.4);
+        animation: fadeIn 1.2s ease-in-out;
+    }
+
+    section h2{
+        margin-bottom:15px;
+        color:#6a1b9a;
+        border-bottom:3px solid #6a1b9a;
+        display:inline-block;
+        padding-bottom:5px;
+    }
+
+    .dia-diem{
+        margin-top:15px;
+        padding:15px;
+        background:#f3e5f5;
+        border-left:6px solid #8e24aa;
+        border-radius:5px;
+    }
+
+    .dia-diem h3{
+        margin-bottom:5px;
+    }
+
+    form input, form textarea{
+        width:100%;
+        padding:10px;
+        margin:8px 0;
+        border-radius:5px;
+        border:1px solid #ccc;
+    }
+
+    button{
+        background:#8e24aa;
+        color:white;
+        padding:10px 20px;
+        border:none;
+        border-radius:5px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    button:hover{
+        background:#6a1b9a;
+    }
+
+    footer{
+        text-align:center;
+        color:white;
+        padding:20px;
+    }
+
+    @keyframes fadeIn{
+        from{opacity:0; transform:translateY(20px);}
+        to{opacity:1; transform:translateY(0);}
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<header>
+    <h1>Khám Phá Cố Đô Huế</h1>
+    <p>Di sản văn hóa – Vẻ đẹp trầm mặc – Ẩm thực tinh tế</p>
+</header>
+
+<nav>
+    <a href="#gioithieu">Giới thiệu</a>
+    <a href="#diadiem">Địa điểm</a>
+    <a href="#datphong">Đặt phòng</a>
+</nav>
+
+<section id="gioithieu">
+    <h2>Giới thiệu về Huế</h2>
+    <p>
+        Huế là vùng đất cố đô nổi tiếng với vẻ đẹp cổ kính và thơ mộng.
+        Nơi đây từng là kinh đô của triều Nguyễn, lưu giữ nhiều giá trị văn hóa,
+        kiến trúc và nghệ thuật đặc sắc của Việt Nam.
+    </p>
+</section>
+
+<section id="diadiem">
+    <h2>Địa điểm tiêu biểu</h2>
+
+    <div class="dia-diem">
+        <h3>Kinh Thành Huế</h3>
+        <p>Quần thể di tích được UNESCO công nhận là Di sản Văn hóa Thế giới.</p>
+    </div>
+
+    <div class="dia-diem">
+        <h3>Chùa Thiên Mụ</h3>
+        <p>Ngôi chùa cổ linh thiêng nằm bên bờ sông Hương thơ mộng.</p>
+    </div>
+
+    <div class="dia-diem">
+        <h3>Lăng Khải Định</h3>
+        <p>Công trình kiến trúc kết hợp hài hòa giữa phong cách Á và Âu.</p>
+    </div>
+
+</section>
+
+<section id="datphong">
+    <h2>Biểu mẫu đặt phòng</h2>
+
+    <form action="mailto:youremail@gmail.com" method="post" enctype="text/plain">
+        <label>Họ và tên:</label>
+        <input type="text" name="hoten" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" required>
+
+        <label>Số điện thoại:</label>
+        <input type="tel" name="sdt">
+
+        <label>Yêu cầu thêm:</label>
+        <textarea name="yeucau" rows="4"></textarea>
+
+        <button type="submit">Gửi thông tin</button>
+    </form>
+
+</section>
+
+<footer>
+    <p>© 2026 Du lịch Huế | Thiết kế bởi bạn</p>
+</footer>
+
+</div>
+
+</body>
+</html>
